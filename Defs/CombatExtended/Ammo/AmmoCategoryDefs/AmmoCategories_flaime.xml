@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- =============== Carl Gustav Shell =============== -->
+   <CombatExtended.AmmoCategoryDef>
+    <defName>HellF</defName>
+    <label>Слёзы солнца</label>
+    <labelShort>CC</labelShort>
+    <description>Дикая смесь из химикатов что горит как плазма.</description>
+  </CombatExtended.AmmoCategoryDef>
+
+ <CombatExtended.AmmoCategoryDef>
+    <defName>LasA</defName>
+    <label>Стандартная лазерная батарея(ожог)</label>
+    <labelShort>BT</labelShort>
+    <description>Энерго ячейка.</description>
+  </CombatExtended.AmmoCategoryDef>
+  
+  <CombatExtended.AmmoCategoryDef>
+    <defName>LasB</defName>
+    <label>Ионизированная лазерная батарея(рад)</label>
+    <labelShort>EL</labelShort>
+    <description>Энерго ячейка.</description>
+  </CombatExtended.AmmoCategoryDef>
+  
+  <CombatExtended.AmmoCategoryDef>
+    <defName>LasC</defName>
+    <label>Статичиский лазер(шок)</label>
+    <labelShort>RI</labelShort>
+    <description>Энерго ячейка.</description>
+  </CombatExtended.AmmoCategoryDef>
+</Defs>

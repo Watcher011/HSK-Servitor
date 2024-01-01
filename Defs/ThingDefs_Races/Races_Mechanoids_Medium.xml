@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- Apocriton -->
+  <ThingDef ParentName="BaseMechanoidWalker">
+    <defName>Mech_Servitor_plasma</defName>
+    <label>Уничтожитель</label>
+    <description>Платформа-фабрика что производит Крикунов, может быть опасна для колонии , даже сражась на стороне колонии.</description>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <MoveSpeed>3.2</MoveSpeed>
+      <EnergyShieldRechargeRate>0.45</EnergyShieldRechargeRate>
+      <EnergyShieldEnergyMax>2.5</EnergyShieldEnergyMax>
+      <BandwidthCost>2</BandwidthCost>
+      <ControlTakingTime>18</ControlTakingTime>
+      <EMPResistance>0.95</EMPResistance>
+    </statBases>
+    <race>
+	     <mechEnabledWorkTypes>
+          <li>Cleaning</li>
+		   <li>Hauling</li>
+        </mechEnabledWorkTypes>
+      <body>Apocriton</body>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Apocriton_Wounded</soundWounded>
+          <soundAngry>Pawn_Mech_Apocriton_Call</soundAngry>
+          <soundDeath>Pawn_Mech_Apocriton_Death</soundDeath>
+          <soundCall>Pawn_Mech_Apocriton_Call</soundCall>
+        </li>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>100</minAge>
+          <soundWounded>Pawn_Mech_Apocriton_Wounded</soundWounded>
+          <soundAngry>Pawn_Mech_Apocriton_Call</soundAngry>
+          <soundDeath>Pawn_Mech_Apocriton_Death</soundDeath>
+          <soundCall>Pawn_Mech_Apocriton_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <baseHealthScale>3.3</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <soundAmbience>Pawn_Mech_Apocriton_Ambience</soundAmbience>
+    </race>
+    <tools>
+      <li>
+        <label>Пушка</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+	<comps>
+      <li Class="CompProperties_MechCarrier">
+        <spawnPawnKind>Mech_WarBomb</spawnPawnKind>
+        <fixedIngredient>Steel</fixedIngredient>
+        <costPerPawn>10</costPerPawn>
+        <startingIngredientCount>60</startingIngredientCount>
+        <maxIngredientCount>60</maxIngredientCount>
+        <spawnEffecter>WarqueenWarUrchinsSpawned</spawnEffecter>
+        <spawnedMechEffecter>WarUrchinSpawned</spawnedMechEffecter>
+        <attachSpawnedEffecter>true</attachSpawnedEffecter>
+        <attachSpawnedMechEffecter>true</attachSpawnedMechEffecter>
+      </li>
+    </comps>
+    <killedLeavingsPlayerHostile>
+	  <ServitorPak>1</ServitorPak> 
+    </killedLeavingsPlayerHostile>
+  </ThingDef>
+  
+  <PawnKindDef ParentName="BaseMechanoidKind">
+    <defName>Mech_Servitor_plasma</defName>
+    <label>Уничтожитель</label>
+    <race>Mech_Servitor_plasma</race>
+    <combatPower>100</combatPower>
+    <maxPerGroup>1</maxPerGroup>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/servitormort</texPath>
+         	
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/servitormort</texPath>
+          	
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>2</drawSize>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+            <li>BeamGraserGun</li>
+    </weaponTags>
+	 <modExtensions>
+            <li Class="CombatExtended.LoadoutPropertiesExtension">
+              <primaryMagazineCount>
+					<min>35</min>
+					<max>50</max>
+				</primaryMagazineCount>
+			</li>
+        </modExtensions>
+    <techHediffsChance>1</techHediffsChance>
+    <techHediffsMoney>9999~9999</techHediffsMoney>
+    <skipResistant>true</skipResistant>
+	
+  </PawnKindDef>
+  
+
+
+
+  
+</Defs>
